@@ -1,0 +1,120 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Solicitud de Consumibles - TTA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <form id="solicitudForm" action="guardar.php" method="POST">
+        <!-- Encabezado -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo-box">TTA</div>
+                <div class="logo-text">
+                    <span>Tecnología</span>
+                    <span>Textil</span>
+                    <span>Avanzada</span>
+                </div>
+            </div>
+
+            <div class="company-title">
+                <h2>Control de Solicitud de Consumibles, Materia Prima y Repuestos.</h2>
+                <h3>Tecnología Textil Avanzada, S.A.</h3>
+            </div>
+
+            <div class="ticket-box">
+                <div class="title">Boleta de Solicitud</div>
+                <div class="number">
+                    <input type="text" id="noBoleta" name="noBoleta" value="3899" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Datos de Ubicación y Fecha -->
+        <div class="form-row">
+            <div class="form-group flex-grow">
+                <label>Lugar:</label>
+                <input type="text" id="lugar" name="lugar" value="Guatemala">
+            </div>
+
+            <div class="form-group date-inputs">
+                <input type="number" id="dia" name="dia" placeholder="Día">
+                <label>de</label>
+                <input type="text" id="mes" name="mes" placeholder="Mes">
+                <label>de</label>
+                <input type="number" id="anio" name="anio" placeholder="Año">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group width-full">
+                <label>Dirección:</label>
+                <input type="text" id="direccion" name="direccion" value="Km 21.5 Antigua Carretera a Amatitlán">
+            </div>
+        </div>
+
+        <!-- Tabla de Productos -->
+        <table id="itemsTable">
+            <thead>
+                <tr>
+                    <th class="col-units">Unidades</th>
+                    <th class="col-desc">Descripción del producto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="unidades[]"></td>
+                    <td><input type="text" name="descripcion[]"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="unidades[]"></td>
+                    <td><input type="text" name="descripcion[]"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="unidades[]"></td>
+                    <td><input type="text" name="descripcion[]"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="unidades[]"></td>
+                    <td><input type="text" name="descripcion[]"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="unidades[]"></td>
+                    <td><input type="text" name="descripcion[]"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Observaciones y Firmas -->
+        <div class="footer-section">
+            <div class="field-line">
+                <label>Observaciones:</label>
+                <input type="text" id="observaciones" name="observaciones">
+            </div>
+            <div class="field-line">
+                <label>Operador:</label>
+                <input type="text" id="operador" name="operador">
+            </div>
+            <div class="field-line">
+                <label>Autorización:</label>
+                <input type="text" id="autorizacion" name="autorizacion">
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="actions">
+            <button type="button" class="btn btn-add" id="btnAddRow">+ Agregar Fila</button>
+            <button type="button" class="btn btn-reset" id="btnReset">Limpiar</button>
+            <button type="button" class="btn btn-print" id="btnPrint">Imprimir</button>
+            <button type="submit" class="btn btn-save" id="btn-save">Guardar</button>
+        </div>
+    </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimiento de Compra - TTA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 30px;
+            background: #f4f4f4;
+        }
+
+        .hoja {
+            background: white;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid #333;
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 28px;
+            color: #e63946;
+        }
+
+        .titulo {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .etiqueta {
+            font-weight: bold;
+            background: #f0f0f0;
+            width: 180px;
+        }
+
+        .texto-derecha {
+            text-align: right;
+        }
+
+        .texto-centro {
+            text-align: center;
+        }
+
+        .fila-vacia td {
+            height: 35px;
+        }
+
+        .firma {
+            width: 50%;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hoja">
+    <table>
+        <!-- Fila: Logo + Título + Documento -->
+        <tr>
+            <td class="logo">TTA<br><small style="font-size:11px; font-weight:normal;">Tecnología Textil Avanzada</small></td>
+            <td class="titulo" colspan="4">REQUERIMIENTO DE COMPRA</td>
+            <td class="etiqueta">No. DOCUMENTO:<br>250506-02</td>
+        </tr>
+
+        <!-- Solicitante + Fecha -->
+        <tr>
+            <td class="etiqueta">PERSONA QUIEN SOLICITA:</td>
+            <td colspan="2">Oscar Ajú</td>
+            <td class="etiqueta">FECHA SOLICITUD:</td>
+            <td colspan="2">18-sep-26</td>
+        </tr>
+
+        <!-- Encabezados de tabla -->
+        <tr>
+            <th>CANTIDAD</th>
+            <th colspan="2">DESCRIPCIÓN</th>
+            <th>UNIDAD<br>MEDIDA</th>
+            <th>AREA DE USO</th>
+            <th>PROVEEDOR<br>SUGERIDO</th>
+        </tr>
+
+        <!-- Filas vacías para llenar -->
+        <tr class="fila-vacia"><td></td><td colspan="2"></td><td></td><td></td><td></td></tr>
+        <tr class="fila-vacia"><td></td><td colspan="2"></td><td></td><td></td><td></td></tr>
+        <tr class="fila-vacia"><td></td><td colspan="2"></td><td></td><td></td><td></td></tr>
+        <tr class="fila-vacia"><td></td><td colspan="2"></td><td></td><td></td><td></td></tr>
+        <tr class="fila-vacia"><td></td><td colspan="2"></td><td></td><td></td><td></td></tr>
+        <tr class="fila-vacia"><td></td><td colspan="2"></td><td></td><td></td><td></td></tr>
+        <tr class="fila-vacia"><td></td><td colspan="2"></td><td></td><td></td><td></td></tr>
+
+        <!-- Para: uso -->
+        <tr>
+            <td class="etiqueta">PARA:</td>
+            <td colspan="5">Uso en diferentes áreas de planta TTA</td>
+        </tr>
+
+        <!-- Firmas -->
+        <tr>
+            <td colspan="3" class="firma">
+                <strong>Firma Solicitante</strong><br><br><br>
+                ORIGINAL: DEPARTAMENTO DE COMPRAS<br>
+                DUPLICADO: SOLICITANTE
+            </td>
+            <td colspan="3" class="firma texto-derecha">
+                <strong>Urgente</strong><br><br>
+                Firma Autorización<br><br><br>
+                F. RECIBIDO: ____________________
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

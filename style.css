@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 850px;
+    padding: 30px;
+    border: 2px solid #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #000;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.company-title {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.company-title h2 {
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.company-title h3 {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.ticket-box {
+    border: 2px solid #000;
+    text-align: center;
+    width: 140px;
+}
+
+.ticket-box .title {
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #000;
+    padding: 4px;
+    background-color: #f0f0f0;
+}
+
+.ticket-box input {
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #d9534f;
+    outline: none;
+    padding: 5px 0;
+}
+
+/* Formulario Principal */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.flex-grow { flex-grow: 1; }
+.width-full { width: 100%; }
+
+.form-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 3px 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.date-inputs #dia { width: 40px; text-align: center; }
+.date-inputs #mes { width: 80px; text-align: center; }
+.date-inputs #anio { width: 60px; text-align: center; }
+
+/* Tabla de Productos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th {
+    background-color: #f0f0f0;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+td input {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.col-units { width: 20%; }
+.col-desc { width: 80%; }
+
+/* Pie de boleta */
+.footer-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.field-line {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.field-line label {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.field-line input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 3px 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botones */
+.actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-add { background-color: #28a745; color: white; }
+.btn-print { background-color: #007bff; color: white; }
+.btn-reset { background-color: #dc3545; color: white; }
+
+/* Estilos de Impresión */
+@media print {
+    body { background-color: #fff; padding: 0; }
+    .container { box-shadow: none; border: 2px solid #000; width: 100%; }
+    .actions { display: none; }
+}
